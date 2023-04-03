@@ -1,4 +1,4 @@
-function onInit({ exc, container, props }) {
+function init({ exc, container, props }) {
     if (props.ph) container.innerText = props.ph
     exc(`$traffic.pagesum("${props.page || ""}")`, null, R => {
         container.innerText = R
@@ -17,6 +17,6 @@ $plugin({
         type: "text",
         label: "数据未加载时的提示语"
     }],
-    onInit,
+    init,
     css: '.zp112 { display: inline-block; }'
 })
