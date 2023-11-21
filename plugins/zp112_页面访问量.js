@@ -1,6 +1,6 @@
 function init({ exc, container, props }) {
     if (props.ph) container.innerText = props.ph
-    exc(`$traffic.pagesum("${props.page || ""}")`, null, R => {
+    exc(`$traffic.pagesum("${props.page || ""}")`, {}, R => {
         container.innerText = R
     })
 }
